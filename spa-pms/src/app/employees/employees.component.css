@@ -1,0 +1,41 @@
+/* EmployeesComponent's private CSS styles */
+.employee {
+  /* margin: 0 0 2em 0; */
+  list-style-type: none;
+  width: 15em;
+  margin: 0 auto;
+}
+.employee li {
+  cursor: pointer;
+  margin: 1.5em;
+  padding: 0.3em 0;
+  border-radius: 4px;
+}
+
+.emp {
+  background-color: #eee;
+  /* width: 15em; */
+  padding: 0.7em;
+}
+.emp:hover {
+  color: #607d8b;
+  background-color: #ddd;
+  left: 0.1em;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 500px;
+}
+li::marker {
+  content: none;
+}

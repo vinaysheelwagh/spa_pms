@@ -7,16 +7,18 @@ import {Departments} from '../mock-departments'
   styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent implements OnInit {
-    departments = Departments;
+  departments = Departments;
   selectedDepartment = false;
   departmentId = "";
   constructor() { }
 
   ngOnInit(): void {
   }
-    onSelect(isSelected: boolean): void{
-      this.selectedDepartment = !isSelected;
-    }
+  //Show all departments
+  onSelect(isSelected: boolean): void{
+    this.selectedDepartment = true;
+  }
+  //toggle the selected department
   onDepartmentClick(departmentId: string ): void{
     this.departmentId = departmentId
     this.departments.forEach(element => {
@@ -24,6 +26,5 @@ export class DepartmentsComponent implements OnInit {
         element.showDept = !element.showDept
       }
     });
-    console.log(this.departmentId)
   }
 }

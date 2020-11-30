@@ -1,0 +1,12 @@
+<ul class="employee" (drop)="drop($event)" (dragover)="allowDrop($event)" data-boxtype="red">
+    <li id={{employee.employeeId}} value={{employee.deptId}} *ngFor="let employee of employees"
+        (click)="onemployeeClick(employee.employeeId, $event)" draggable="true" (dragstart)="drag($event)">
+
+        <div class="emp">
+            {{employee.firstName}} {{employee.lastName}}
+        </div>
+        <!-- <div *ngIf="employee.showEmployee">
+            <app-employee-details [emp]="employee"></app-employee-details>
+        </div> -->
+    </li>
+</ul>

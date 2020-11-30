@@ -1,14 +1,16 @@
 <h3 (click)="onSelect(selectedDepartment)">R&D department</h3>
 
 <div class="grid grid-pad" *ngIf="selectedDepartment">
-
-    <div class="col-1-4" *ngFor="let department of departments" (click)="onDepartmentClick(department.id)">
+    <!-- Iterate the departments list and create element for each item -->
+    <div class="col-1-4" 
+        *ngFor="let department of departments" 
+        (click)="onDepartmentClick(department.id)">
         <div class="module hero">
             {{department.name}}
         </div>
-        <!-- <div *ngIf="department.showDept">
-            <app-employes [department]="departmentId"></app-employes>
-        </div> -->
+        <div *ngIf="department.showDept">
+            <app-employees [department]="departmentId"></app-employees>
+        </div>
     </div>
 
 </div>
