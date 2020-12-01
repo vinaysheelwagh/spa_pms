@@ -16,6 +16,7 @@
   background-color: #eee;
   /* width: 15em; */
   padding: 0.7em;
+  text-align: center;
 }
 .emp:hover {
   color: #607d8b;
